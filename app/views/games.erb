@@ -1,0 +1,35 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <title>Jackpot</title>
+    </head>
+    <body>
+        <h1></h1>
+    <nav>
+    <div class="nav-wrapper light-blue darken-3" >
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+          </ul>
+    </div>
+  </nav>
+  <h1><center>Dealer: <%=@playerCard1%></center></h1>
+  <h1><center> Player: <%=@playerCard2 + @playerCard3%></center></h1>
+    <%= @message %>
+   <form class="" action="/gameplay" method = "POST">
+                 To begin, HIT ME
+              <br />
+            To leave and still have a card, STAND
+         
+            <input type="text" name="choice" />
+             <br />
+             <input type = "hidden" name = "playerCard1" value = "<%=@playerCard1%>">
+             <input type = "hidden" name = "playerCard2" value = "<%=@playerCard2%>">
+            <input type= "submit" value= "submit" />
+        </form>
+        <%= @sentence %>
+    </body>
+    
+    
+    
+</html>
